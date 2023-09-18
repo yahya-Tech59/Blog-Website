@@ -1,7 +1,7 @@
 import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
 
-export const UserSlice = createSlice({
+const UserSlice = createSlice({
   name: "user",
   initialState: {
     isSignIn: false,
@@ -11,7 +11,7 @@ export const UserSlice = createSlice({
   },
 
   reducers: {
-    setSignIn: (state, action) => {
+    setSignedIn: (state, action) => {
       state.isSignIn = action.payload;
     },
     setUserData: (state, action) => {
@@ -25,3 +25,13 @@ export const UserSlice = createSlice({
     },
   },
 });
+
+export const { setSignedIn, setUserData, setInput, setBlogData } =
+  UserSlice.actions;
+
+export const selectSignedIn = (state) => state.user.isSignedIn;
+export const selectUserData = (state) => state.user.userData;
+export const selectUserInput = (state) => state.user.searchInput;
+export const selectBlogData = (state) => state.user.blogData;
+
+export default UserSlice.reducer;

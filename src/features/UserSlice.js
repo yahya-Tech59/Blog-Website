@@ -1,18 +1,16 @@
-import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
 
-const UserSlice = createSlice({
+const userSlice = createSlice({
   name: "user",
   initialState: {
-    isSignIn: false,
+    isSignedIn: false,
     userData: null,
     searchInput: "tech",
     blogData: null,
   },
-
   reducers: {
     setSignedIn: (state, action) => {
-      state.isSignIn = action.payload;
+      state.isSignedIn = action.payload;
     },
     setUserData: (state, action) => {
       state.userData = action.payload;
@@ -27,11 +25,11 @@ const UserSlice = createSlice({
 });
 
 export const { setSignedIn, setUserData, setInput, setBlogData } =
-  UserSlice.actions;
+  userSlice.actions;
 
 export const selectSignedIn = (state) => state.user.isSignedIn;
 export const selectUserData = (state) => state.user.userData;
 export const selectUserInput = (state) => state.user.searchInput;
 export const selectBlogData = (state) => state.user.blogData;
 
-export default UserSlice.reducer;
+export default userSlice.reducer;

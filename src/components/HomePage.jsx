@@ -9,7 +9,7 @@ import {
 
 import "../styling/home.css";
 
-export const HomePage = () => {
+export const Homepage = () => {
   const isSignedIn = useSelector(selectSignedIn);
 
   const dispatch = useDispatch();
@@ -25,12 +25,12 @@ export const HomePage = () => {
         <div className="login__message">
           <h2>📗</h2>
           <h1>A Readers favourite place!</h1>
-          <p>User not available 😞
+          <p>
             We provide high quality online resource for reading blogs. Just sign
             up and start reading some quality blogs.
           </p>
           <GoogleLogin
-            clientId="916743503861-u8ugpp74rvvsua2g8276t5nf5ttk13pm.apps.googleusercontent.com"
+            clientId="1084334404054-jch76dh3eqbj787ostatku2t93h61muv.apps.googleusercontent.com"
             render={(renderProps) => (
               <button
                 onClick={renderProps.onClick}
@@ -52,3 +52,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default Homepage;

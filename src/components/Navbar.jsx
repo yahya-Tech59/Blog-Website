@@ -55,7 +55,7 @@ export const Navbar = () => {
           />
           <h1 className="signedIn">{userData?.givenName}</h1>
           <GoogleLogout
-            clientId="916743503861-u8ugpp74rvvsua2g8276t5nf5ttk13pm.apps.googleusercontent.com"
+            clientId="1084334404054-jch76dh3eqbj787ostatku2t93h61muv.apps.googleusercontent.com"
             render={(renderProps) => (
               <button
                 onClick={renderProps.onClick}
@@ -74,5 +74,3 @@ export const Navbar = () => {
     </div>
   );
 };
-
-// 916743503861-u8ugpp74rvvsua2g8276t5nf5ttk13pm.apps.googleusercontent.com
